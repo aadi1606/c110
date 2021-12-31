@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Gesture Web App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        
+    
+    </head>
+    <body style="background-color: skyblue; ">
+        <div class="container">
+            <center>
+                <h3 class="btn btn-warning heading" style="font-size: 28px; height: 100px; letter-spacing: 4px;" >
+                   GESTURE WEB APP
+                   <br>
+                   <span style="font-size: 35px;">&#128076;</span>
+                   <span style="font-size: 35px;">&#128077;</span>
+                   <span style="font-size: 35px;">&#9994;</span>
+                   <span style="font-size: 35px;">&#9996;</span>
+                   <span style="font-size: 35px;">&#128079;</span>
+                   <span style="font-size: 35px;">&#129304;</span>
+                   <br><br>
+                </h3>
+                <br><br>
+                <p style="color: white; font-size: 26px;">Take a selfie of a gesture to know about it's meaning</p>
+                <br>
+                <p style="color: white; font-size: 24px;">On the following gestures the model is trained - </p>
+                <br>
+                <span style="font-size: 35px; letter-spacing: 6px;">
+                    <span>&#128076;</span>
+                    <span>&#128077;</span>
+                    <span>&#9996;</span>
+                </span>
+                <br>
+                <br>
+                <label style="background-color: green; color: white; font-size: 26px; height: 44px; border-radius: 8px; width: 175px;">Prediction-</label>
+                
+            </center>
+
+            <div class="col-md-4 col-sm-12 col-xs-12" style="text-align: left;">
+            <label style="background-color: green; color: white; border-radius: 8px; font-size: 22px;height: 36px;">Webcam View- </label>
+            <div id="camera">
+          
+            </div>
+            <br>
+            <button onclick="take_snapshot()" style="background-color: orange; color: white; font-size: 22px; height: 34px; border-radius: 8px ;">Capture Image</button>
+            </div>
+            <br>
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                
+                <p class="emotion_name" id="result_emotion_name"></p>
+                <p class="emoji" id="update_emoji"></p>
+                
+            
+                <p class="emotion_name" id="result_emotion_name2"></p>
+                <p class="emoji" id="update_emoji2"></p>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label style="background-color: green; color: white; border-radius: 8px; font-size: 22px; height: 36px;">Snapshot - </label>
+                  <div id="result"></div>
+                  <br>
+                  <button onclick="check();" class="btn btn-success" style="background-color: orange; color: white; font-size: 22px; height: 34px;border-radius: 8px;">Predict Emotion</button>
+                          </div>
+
+                <script src="main.js"></script>       
+    </body> 
+</html>
